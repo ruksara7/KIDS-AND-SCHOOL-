@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sunshine Kids Academy - Playgroup & Nursery</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --kid-yellow: #FFD700;
+            --kid-pink: #FF69B4;
+            --kid-blue: #40E0D0;
+            --kid-green: #98FB98;
+            --kid-purple: #DDA0DD;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fff3e0 0%, #fce4ec 100%);
+            overflow-x: hidden;
+        }
+        .navbar {
+            background: linear-gradient(135deg, var(--kid-yellow), var(--kid-pink)) !important;
+            box-shadow: 0 8px 32px rgba(255,215,0,0.3);
+            padding: 1rem 0;
+        }
+        .navbar-brand {
+            font-family: 'Fredoka One', cursive;
+            font-size: 2rem;
+            color: #fff !important;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .hero-kids {
+            background: linear-gradient(135deg, var(--kid-blue), var(--kid-purple));
+            color: white;
+            padding: 150px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-kids::before {
+            content: '🌟✨🎈';
+            position: absolute;
+            top: 20%; left: 10%; font-size: 4rem; animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .kid-card {
+            border: none;
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            overflow: hidden;
+            background: white;
+            position: relative;
+        }
+        .kid-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--kid-yellow), var(--kid-pink), var(--kid-blue));
+        }
+        .kid-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+        }
+        .section-padding { padding: 100px 0; }
+        .section-title {
+            font-family: 'Fredoka One', cursive;
+            font-size: clamp(2rem, 5vw, 4rem);
+            color: var(--kid-yellow);
+            margin-bottom: 3rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .whatsapp-kids {
+            background: #25D366 !important;
+            border-radius: 50px !important;
+            font-size: 1.2rem;
+            padding: 1rem 2rem !important;
+            font-weight: 700;
+        }
+        .fun-fact {
+            background: linear-gradient(135deg, var(--kid-green), var(--kid-blue));
+            color: white;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .hero-kids { padding: 100px 20px; }
+            .navbar-brand { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-sun me-2"></i>Sunshine Kids
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero-kids">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto">
+                    <h1 class="display-2 fw-bold mb-4 animate__animated animate__bounceIn" style="font-family: 'Fredoka One', cursive;">
+                        Sunshine Kids Academy
+                    </h1>
+                    <p class="display-5 mb-5">Fun Learning for Little Stars 🌟 | Playgroup to UKG</p>
+                    <a href="https://wa.me/917947139844" class="btn whatsapp-kids btn-lg px-5 me-3 mb-3" target="_blank">
+                        <i class="fab fa-whatsapp me-2"></i>Enroll Now
+                    </a>
+                    <a href="#programs" class="btn btn-light btn-lg px-5 mb-3">
+                        <i class="fas fa-book-open me-2"></i>Our Programs
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAMS -->
+    <section id="programs" class="section-padding bg-white">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">🎨 Our Fun Programs</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="kid-card h-100 text-center p-5">
+                        <i class="fas fa-baby fa-4x text-warning mb-4"></i>
+                        <h3 class="fw-bold mb-3 fs-2">Playgroup (1.5-2.5 yrs)</h3>
+                        <p class="lead mb-4">Nurturing first steps with love & play</p>
+                        <div class="fun-fact mb-4">
+                            <h4>📚 Rhymes & Stories</h4>
+                            <h4>🎲 Sensory Play</h4>
+                        </div>
+                        <span class="badge bg-warning fs-6 px-4 py-2">3 Hrs/Day</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="kid-card h-100 text-center p-5">
+                        <i class="fas fa-seedling fa-4x text-success mb-4"></i>
+                        <h3 class="fw-bold mb-3 fs-2">Nursery (2.5-3.5 yrs)</h3>
+                        <p class="lead mb-4">Growing curiosity through creative play</p>
+                        <div class="fun-fact mb-4">
+                            <h4>✏️ Alphabet Fun</h4>
+                            <h4>🎨 Art & Craft</h4>
+                        </div>
+                        <span class="badge bg-success fs-6 px-4 py-2">4 Hrs/Day</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="kid-card h-100 text-center p-5">
+                        <i class="fas fa-magic fa-4x text-info mb-4"></i>
+                        <h3 class="fw-bold mb-3 fs-2">LKG-UKG (3.5-5.5 yrs)</h3>
+                        <p class="lead mb-4">Foundation for school success</p>
+                        <div class="fun-fact mb-4">
+                            <h4>1️⃣ Numbers Magic</h4>
+                            <h4>🌍 World Discovery</h4>
+                        </div>
+                        <span class="badge bg-info fs-6 px-4 py-2">5 Hrs/Day</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FUN FACTS -->
+    <section class="section-padding" style="background: linear-gradient(135deg, var(--kid-yellow), var(--kid-pink));">
+        <div class="container">
+            <div class="row text-center text-white g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="display-3 fw-bold mb-2">🌟 150+</div>
+                    <h4>Happy Kids</h4>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="display-3 fw-bold mb-2">👩‍🏫 12</div>
+                    <h4>Loving Teachers</h4>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="display-3 fw-bold mb-2">🏆 5</div>
+                    <h4>Awards Won</h4>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="display-3 fw-bold mb-2">🎉 50+</div>
+                    <h4>Fun Events</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">📸 Moments of Joy</h2>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="kid-card position-relative overflow-hidden" style="height: 250px; background: linear-gradient(45deg, #ffecd2, #fcb69f);">
+                        <div class="position-absolute bottom-0 p-4 w-100" style="background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;">
+                            <h4>Rainbow Day 🎨</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="kid-card position-relative overflow-hidden" style="height: 250px; background: linear-gradient(45deg, #a8edea, #fed6e3);">
+                        <div class="position-absolute bottom-0 p-4 w-100" style="background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;">
+                            <h4>Sports Carnival 🏃‍♀️</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="kid-card position-relative overflow-hidden" style="height: 250px; background: linear-gradient(45deg, #ff9a9e, #fecfef);">
+                        <div class="position-absolute bottom-0 p-4 w-100" style="background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;">
+                            <h3>🎂 Birthday Party</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="kid-card position-relative overflow-hidden" style="height: 250px; background: linear-gradient(45deg, #a1c4fd, #c2e9fb);">
+                        <div class="position-absolute bottom-0 p-4 w-100" style="background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;">
+                            <h4>Science Magic 🔬</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section-padding" style="background: linear-gradient(135deg, var(--kid-purple), var(--kid-green));">
+        <div class="container">
+            <h2 class="section-title text-center mb-5 text-white">👨‍👩‍👧‍👦 Join Our Family</h2>
+            <div class="row g-4 text-center text-white">
+                <div class="col-lg-4">
+                    <div class="p-5">
+                        <i class="fas fa-map-marker-alt fa-3x mb-4 text-warning"></i>
+                        <h4>Near Sunshine Park</h4>
+                        <p>Varanasi, UP 221001</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="p-5">
+                        <i class="fas fa-phone fa-3x mb-4 text-success"></i>
+                        <h4>Call Anytime</h4>
+                        <div>
+                            <a href="tel:07947139844" class="text-white h5">07947139844</a><br>
+                            <a href="tel:07942695234" class="text-white h5">07942695234</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="p-5">
+                        <i class="fab fa-whatsapp fa-3x mb-4 text-success"></i>
+                        <a href="https://wa.me/917947139844" class="btn whatsapp-kids btn-lg px-5" target="_blank">
+                            Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container text-center">
+            <h3 class="mb-4"><i class="fas fa-heart text-danger me-2"></i>Sunshine Kids Academy</h3>
+            <p class="lead mb-4">"Where Little Stars Shine Bright!" ✨</p>
+            <div class="d-flex justify-content-center gap-4 mb-4">
+                <a href="https://wa.me/917947139844" class="btn btn-warning btn-lg" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="btn btn-info btn-lg"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="btn btn-danger btn-lg"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="mb-0">&copy; 2026 Sunshine Kids Academy. Made with ❤️ in Varanasi</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.js"></script>
+</body>
+</html>
